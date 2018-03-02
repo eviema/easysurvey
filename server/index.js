@@ -13,7 +13,7 @@ const app = express();
 // res - object representing the outgoing response
 // res.send({hi: 'there'}) - immediately send some JSON back to whoever made this request
 app.get('/', (req, res) => {
-    res.send({hi: 'there'});
+    res.send({bye: 'buddy'});
 })
 
 // uses the port Heroku provides us for prod env or 
