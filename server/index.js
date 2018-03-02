@@ -16,5 +16,9 @@ app.get('/', (req, res) => {
     res.send({hi: 'there'});
 })
 
-app.listen(5000);
+// uses the port Heroku provides us for prod env or 
+// just 5000 in other envs, e.g dev env on local machine
+const PORT = process.env.PORT || 5000; 
+// instructs Express to tell Node to listen for incoming requests on a particular port
+app.listen(PORT);
 
