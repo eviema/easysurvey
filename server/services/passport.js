@@ -22,7 +22,7 @@ passport.use(
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
       callbackURL: "/auth/google/callback",
-      proxy: true
+      proxy: true // trust heroku proxy
     },
     (accessToken, refreshToken, profile, done) => {
       // findOne returns a "promise", asynchronous,
